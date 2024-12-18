@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="backendcss/style.css" />
+    <script src="./backendcss/script.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <!-- Navbar overlay -->
+      <div class="navbar">
+        <a href="">
+          <button
+            class="c-button c-button--gooey"
+            style="background-color: #ffffff; color: #000"
+          >
+            <i class="fas fa-home"></i> Home
+            <div class="c-button__blobs">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </button>
+        </a>
+
+        <a href="" style="display: inline-block; text-decoration: none">
+          <button class="c-button c-button--gooey">
+            <i class="fas fa-store"></i> Shop
+            <div class="c-button__blobs">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </button>
+        </a>
+
+        <a href="">
+          <button class="c-button c-button--gooey">
+            <i class="fas fa-info-circle"></i> About Us
+            <div class="c-button__blobs">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </button>
+        </a>
+
+        <a href="">
+          <button class="c-button c-button--gooey">
+            <i class="fas fa-shopping-cart"></i> Cart
+            <div class="c-button__blobs">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </button>
+        </a>
+
+        <a href="">
+          <button class="c-button c-button--gooey">
+            <i class="fas fa-sign-in-alt"></i> Log In
+            <div class="c-button__blobs">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </button>
+        </a>
+      </div>
+
+      <div class="heading">
+        <h1>Admin Panel</h1>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="main-left">
+        <div class="container">
+          <h1>Section</h1>
+          <ul class="link-list">
+            <li>
+              <a href="#button-container" onclick="showSection('section1')"
+                >Navigation_bar</a
+              >
+            </li>
+            <li>
+              <a href="#section2"  onclick="showSection('section2')">Video</a>
+            </li>
+            <li>
+              <a href="#section3" onclick="showSection('section3')"
+                >Catogery_cards</a
+              >
+            </li>
+            <li>
+              <a href="#"  onclick="showSection('section4')">Slider1</a>
+            </li>
+            <li>
+              <a href="#"  onclick="showSection('section5')">Slider2</a>
+            </li>
+            <li>
+              <a href="#"  onclick="showSection('section1')">Testimonials</a>
+            </li>
+            <li><a href="#"  onclick="showSection('section4')">Footer</a></li>
+            <li><a href="nextpage.html">Next Page</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-right">
+
+     <!-- Section 1 -->
+
+    <section id="section1" class="section-content">
+      <!-- Main Button Container -->
+      <div id="button-container" class="button-container">
+        <h1 class="button-title">Button Examples</h1>
+        <button class="primary-btn updatelink" onclick="showDiv('updatelink')">Update Link</button>
+        <button class="primary-btn addlink" onclick="showDiv('addlink')">Add Link</button>
+      </div>
+        <!-- Update Link Section -->
+        <div id="updatelink" class="new-div" style="display: none;">
+          <button class="back-btn" onclick="showButtonContainer()">Back</button>
+          
+          <!-- Add content here -->
+
+          <table border="1">
+            <tr>
+              <td>Name</td>
+              <td>Link</td>
+            </tr>
+            <tr>
+              <td><label for="navbarlinks">Link Name</label></td>
+              <td><input type="text" name="navbarlinks" id=""></td>
+            </tr>
+            <tr>
+              <td><label for="">Updated Link</label></td>
+              <td><input type="text" name="" id=""></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="button" value="Update"></td>
+            </tr>
+          </table>
+
+        </div>
+      
+        <!-- Add Link Section -->
+        <div id="addlink" class="new-div" style="display: none;">
+          <button class="back-btn" onclick="showButtonContainer()">Back</button>
+          <!-- Add content here -->
+        </div>
+    </section>
+
+
+  
+
+  <!-- Section 2 -->
+  <div id="section2" class="section-content" style="display: none;">
+      <h2>Section 2</h2>
+      <p>This is the content of Section 2.</p>
+  </div>
+
+  <!-- Section 3 -->
+  <div id="section3" class="section-content" style="display: none;">
+      <h2>Section 3</h2>
+      <p>This is the content of Section 3.</p>
+  </div>
+
+  <!-- Section 4 -->
+  <div id="section4" class="section-content" style="display: none;">
+      <h2>Section 4</h2>
+      <p>This is the content of Section 4.</p>
+  </div>
+
+  <!-- Section 5 -->
+  <div id="section5" class="section-content" style="display: none;">
+      <h2>Section 5</h2>
+      <p>This is the content of Section 5.</p>
+  </div>
+    </div>
+
+  </body>
+</html>

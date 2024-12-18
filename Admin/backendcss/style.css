@@ -1,0 +1,309 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.cdnfonts.com/css/proxima-nova-condensed");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Ensure the header container is positioned properly */
+.header {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Full viewport height */
+  overflow: hidden;
+  background-image: url("image/Alcoholic\ Drinks\ ClipArt\ for\ Social\ Media.jpeg");
+}
+
+/* Style the video to fill the container */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  /* padding: 0 20px; */
+  z-index: 10;
+}
+
+/* From Uiverse.io by dpaulos6 */
+.c-button {
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+
+.c-button--gooey {
+  color: #ffffff;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid rgba(255, 255, 255, 0);
+  position: relative;
+  transition: all 700ms ease;
+  border-radius: 999px;
+}
+
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.c-button--gooey .c-button__blobs div {
+  background-color: #ffffff;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+  color: #000000;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+.c-button i {
+  margin-right: 8px;
+  font-size: 1rem; /* Adjust size as needed */
+}
+
+/* Hide the icon by default */
+.menu-icon {
+  display: none; /* Icon is hidden on desktop and larger screens */
+}
+
+.menu-links {
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Arrange buttons vertically */
+  position: absolute;
+  top: 60px; /* Position below the navbar */
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for the dropdown */
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 11;
+}
+
+.menu-links a {
+  margin-bottom: 10px; /* Add spacing between buttons */
+}
+
+.menu-links a:last-child {
+  margin-bottom: 0; /* Remove margin for the last button */
+}
+
+.menu-icon {
+  display: none; /* Default: hidden */
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  padding-top: 8%;
+}
+.heading h1 {
+  font-size: 80px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: inline-block; /* Show menu icon on smaller devices */
+  }
+
+  .menu-links {
+    display: none; /* Hidden until toggled */
+  }
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 75vh;
+  background-color: yellowgreen;
+}
+.main-left {
+  width: 30%;
+  height: inherit;
+  background-color: yellow;
+  border-right: #000000 5px solid;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+/* List Styles */
+.link-list {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+}
+
+.link-list li {
+  margin: 15px 0;
+}
+
+.link-list a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect */
+.link-list a:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.main-right {
+  width: 70%;
+  height: inherit;
+  background-color: violet;
+}
+
+.button-container {
+  text-align: center;
+  margin: 20% auto;
+  padding: 20px;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #007bff;
+}
+
+/* Button Styles */
+.primary-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover and Active Effects */
+.primary-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:active {
+  background-color: #004085;
+}
+
+/* Link Button Specific Styles */
+.link-btn {
+  text-align: center;
+}
+
+#updatelink {
+  height: inherit;
+  width: 100%;
+  background-color: tomato;
+}
+#addlink {
+  height: inherit;
+  width: 100%;
+  background-color: lime;
+}
+
+#video {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+
+/* Section Content */
+.section-content {
+  display: block; /* Hide all sections by default */
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-content h2 {
+  color: #007bff;
+}

@@ -1,0 +1,374 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* Ensure the header container is positioned properly */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    ;
+  
+  }
+  
+  /* Style the video to fill the container */
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end ;
+    
+    /* padding: 0 20px; */
+    z-index: 10;
+  }
+  
+  
+  /* From Uiverse.io by dpaulos6 */ 
+  .c-button {
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0.9em 1.6em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .c-button--gooey {
+    color: #ffffff;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 4px solid rgba(255, 255, 255, 0);
+    position: relative;
+    transition: all 700ms ease;
+    border-radius: 999px;
+  }
+  
+  .c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+    border-radius: 20px;
+  }
+  
+  .c-button--gooey .c-button__blobs div {
+    background-color: #ffffff;
+    width: 34%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.4) translateY(125%) translateZ(0);
+    transition: all 700ms ease;
+  }
+  
+  .c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+  }
+  
+  .c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+  }
+  
+  .c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+  }
+  
+  .c-button--gooey:hover {
+    color: #000000;
+  }
+  
+  .c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1.4) translateY(0) translateZ(0);
+  }
+  
+  .c-button i {
+    margin-right: 8px;
+    font-size: 1rem; /* Adjust size as needed */
+  }
+
+
+  /* heading */
+
+.heading{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    
+    
+  }
+  
+  .heading h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:2.5rem;
+    padding: 0px 0px 0px 20px;
+    color: black;
+    text-transform: uppercase;
+  }
+  
+  .heading p{
+    font-size: larger;
+  
+    margin-right: 100px;
+  }
+  
+  hr {
+    width: 52%; /* Set the desired width */
+     /* Centers the element horizontally */
+    margin-left: 20px;
+    border: 5px solid rgb(255, 0, 0); /* Adds the border */
+    border-radius: 5px;
+  }
+  
+  /* exit heading */
+
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    width: 353px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    overflow: hidden;
+    display: block;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.rating span {
+    color: gold;
+}
+
+.tag {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.view-more-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden1 {
+  display: none;
+}
+
+.hidden2 {
+  display: none;
+}
+
+.hidden3 {
+  display: none;
+}
+
+.hidden4 {
+  display: none;
+}
+
+.view-more-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.view-more-button1 {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.view-more-button2 {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.view-more-button3 {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.view-more-button4 {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* footer start*/
+
+
+
+/* Reset styles */
+.footer-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .footer-container {
+    max-width: 1170px;
+    margin: auto;
+  }
+  
+  .footer-container .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer-container ul {
+    list-style: none;
+  }
+  
+  .footer {
+    background-color: #000000;
+    padding: 70px 0;
+  }
+  
+  .footer .footer-col {
+    width: 25%;
+    padding: 0 15px;
+  }
+  
+  .footer .footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .footer .footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    width: 50px;
+  }
+  
+  .footer .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  .footer .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #bbbbbb;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .footer .footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  
+  .footer .footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  
+  .footer .footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 767px) {
+    .footer .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 574px) {
+    .footer .footer-col {
+      width: 100%;
+    }
+  }
+  
+  
+  /* footer end */
