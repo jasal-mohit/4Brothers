@@ -1,36 +1,33 @@
-// nav bar video 
+// nav bar video
 const videos = [
-    "css/video/WhatsApp Video 2024-11-10 at 18.48.43_0d1a90e8.mp4",
-    "css/video/WhatsApp Video 2024-11-10 at 19.09.24_b1951172.mp4"
-  ];
-  
-  let videoIndex = 0;
-  const videoElement = document.getElementById("videoPlayer");
-  
-  function changeVideo() {
-    // Update the video source
-    videoElement.src = videos[videoIndex];
-  
-    // Load the new video and start playing
-    videoElement.load();
-    videoElement.play();
-  }
-  
-  // Initial video setup
-  changeVideo();
-  
-  // When the video ends, switch to the next video
-  videoElement.onended = function() {
-    videoIndex = (videoIndex + 1) % videos.length;  // Loop through the videos
-    changeVideo();  // Change the video and play the next one
-  };
- 
- // nav bar video end
- 
- 
+  "css/video/WhatsApp Video 2024-11-10 at 18.48.43_0d1a90e8.mp4",
+  "css/video/WhatsApp Video 2024-11-10 at 19.09.24_b1951172.mp4",
+];
+
+let videoIndex = 0;
+const videoElement = document.getElementById("videoPlayer");
+
+function changeVideo() {
+  // Update the video source
+  videoElement.src = videos[videoIndex];
+
+  // Load the new video and start playing
+  videoElement.load();
+  videoElement.play();
+}
+
+// Initial video setup
+changeVideo();
+
+// When the video ends, switch to the next video
+videoElement.onended = function () {
+  videoIndex = (videoIndex + 1) % videos.length; // Loop through the videos
+  changeVideo(); // Change the video and play the next one
+};
+
+// nav bar video end
 
 // latest added products slider start
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const restaurantContainer = document.querySelector(".card-slider");
@@ -62,11 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateButtonState();
 });
 
-
 // latest added products slider end
-
-
-
 
 // top selling products slider start
 
@@ -89,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-// ends here
+  // ends here
   rightRButton1.onclick = function () {
     restaurantContainer1.scrollBy({
       left: restaurantContainer1.offsetWidth / 2,
@@ -102,24 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // top selling products slider end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //  customer review slider start
 document.addEventListener("DOMContentLoaded", () => {
@@ -140,22 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // customer review slider end
 
-
-
 // navbar responsive start
+// Toggle Dropdown Menu
+const menuIcon = document.querySelector(".menu-icon");
+const menuLinks = document.querySelector(".menu-links");
 
-// JavaScript to toggle the display of the menu links
-const menuIcon = document.querySelector('.menu-icon');
-const menuLinks = document.querySelector('.menu-links');
-
-// Add click event to toggle the menu
-menuIcon.addEventListener('click', () => {
-  if (menuLinks.style.display === 'none' || menuLinks.style.display === '') {
-    menuLinks.style.display = 'flex'; // Show the buttons
-  } else {
-    menuLinks.style.display = 'none'; // Hide the buttons
-  }
+menuIcon.addEventListener("click", () => {
+  menuLinks.classList.toggle("show");
 });
-
-
-// navbar responsive end

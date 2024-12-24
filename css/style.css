@@ -1,22 +1,18 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url("https://fonts.cdnfonts.com/css/proxima-nova-condensed");
 
-*{
-  margin: 0px;
-  padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-
-
 /* Ensure the header container is positioned properly */
-.header {
+header {
   position: relative;
   width: 100%;
   height: 100vh; /* Full viewport height */
   overflow: hidden;
-  
-
 }
 
 /* Style the video to fill the container */
@@ -26,24 +22,99 @@ video {
   object-fit: cover;
 }
 
-/* Navbar styling */
-.navbar {
-  position:fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+/* Navbar Styling */
+nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-end ;
-  
-  /* padding: 0 20px; */
-  z-index: 10;
+  /* background-color: #e91e63; */
+  height: 60px;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-/* From Uiverse.io by dpaulos6 */ 
+.menu-links {
+  display: flex; /* Always show links as a row initially */
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu-links li a:hover {
+  color: #ffb74d;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Dropdown Menu (for smaller screens) */
+.menu-links.small-screen {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: slide-down 0.3s ease-in-out;
+}
+
+.menu-links.small-screen.show {
+  display: flex;
+}
+
+/* Animations */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-links {
+    display: none; /* Hide links by default for smaller screens */
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu icon on smaller screens */
+  }
+
+  .menu-links.small-screen {
+    display: none; /* Ensure dropdown is hidden initially */
+  }
+}
+/* From Uiverse.io by dpaulos6 */
 .c-button {
   font-weight: 700;
   font-size: 16px;
@@ -117,74 +188,25 @@ video {
   font-size: 1rem; /* Adjust size as needed */
 }
 
-/* Hide the icon by default */
-.menu-icon {
-  display: none; /* Icon is hidden on desktop and larger screens */
-}
-
-.menu-links {
-  display: none; /* Hidden by default */
-  flex-direction: column; /* Arrange buttons vertically */
-  position: absolute;
-  top: 60px; /* Position below the navbar */
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background for the dropdown */
-  padding: 10px;
-  border-radius: 10px;
-  z-index: 11;
-}
-
-.menu-links a {
-  margin-bottom: 10px; /* Add spacing between buttons */
-}
-
-.menu-links a:last-child {
-  margin-bottom: 0; /* Remove margin for the last button */
-}
-
-.menu-icon {
-  display: none; /* Default: hidden */
-  cursor: pointer;
-  font-size: 24px;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .menu-icon {
-    display: inline-block; /* Show menu icon on smaller devices */
-  }
-
-  .menu-links {
-    display: none; /* Hidden until toggled */
-  }
-}
-
-
-
-
-/* exit */
-
 /* heading */
 
-.heading{
+.heading {
   width: 100%;
   height: 150px;
   display: flex;
   flex-direction: column;
   color: #000000;
-  
-  
 }
 
-.heading h1{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size:2.5rem;
+.heading h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2.5rem;
   padding: 0px 0px 0px 20px;
   color: black;
   text-transform: uppercase;
 }
 
-.heading p{
+.heading p {
   font-size: larger;
 
   margin-right: 100px;
@@ -192,7 +214,7 @@ video {
 
 hr {
   width: 52%; /* Set the desired width */
-   /* Centers the element horizontally */
+  /* Centers the element horizontally */
   margin-left: 20px;
   border: 5px solid rgb(255, 0, 0); /* Adds the border */
   border-radius: 5px;
@@ -200,22 +222,15 @@ hr {
 
 /* exit heading */
 
+/* From Uiverse.io by durvish2010 */
 
-
-
-
-
-/* From Uiverse.io by durvish2010 */ 
-
-.cardsbody1{
-  display:flex;
+.cardsbody1 {
+  display: flex;
   width: 100%;
-  height: auto; 
+  height: auto;
   justify-content: space-evenly;
   align-content: center;
-  
 }
-
 
 .card {
   position: relative;
@@ -232,7 +247,6 @@ hr {
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin: 40px 15px 20px 30px; /* Ensure spacing between cards */
 }
-
 
 .card svg {
   width: 48px;
@@ -251,8 +265,8 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  box-sizing: border-box; 
-  background-image: url('image/beers.jpg');
+  box-sizing: border-box;
+  background-image: url("image/beers.jpg");
   background-size: 100%;
   background-position: center;
   transform: rotateX(-90deg);
@@ -266,7 +280,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('image/beers.jpg');
+  background-image: url("image/beers.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(8px); /* Apply the blur effect to the image */
@@ -289,8 +303,8 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  box-sizing: border-box; 
-  background-image: url('image/download\ \(1\).jpg');
+  box-sizing: border-box;
+  background-image: url("image/download\ \(1\).jpg");
   background-size: 100%;
   background-position: center;
   transform: rotateX(-90deg);
@@ -304,7 +318,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('image/Packaging\ Design\ Inspiration.jpg');
+  background-image: url("image/Packaging\ Design\ Inspiration.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(8px); /* Apply the blur effect to the image */
@@ -327,8 +341,8 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  box-sizing: border-box; 
-  background-image: url('image/Mojito\ Hawái_By_\ Carlos\ Puche.jpg');
+  box-sizing: border-box;
+  background-image: url("image/Mojito\ Hawái_By_\ Carlos\ Puche.jpg");
   background-size: 100%;
   background-position: center;
   transform: rotateX(-90deg);
@@ -342,7 +356,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('image/Mojito\ Hawái_By_\ Carlos\ Puche.jpg');
+  background-image: url("image/Mojito\ Hawái_By_\ Carlos\ Puche.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(8px); /* Apply the blur effect to the image */
@@ -365,8 +379,8 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  box-sizing: border-box; 
-  background-image: url('image/Wallpaper\ energy.jpg');
+  box-sizing: border-box;
+  background-image: url("image/Wallpaper\ energy.jpg");
   background-size: 100%;
   background-position: center;
   transform: rotateX(-90deg);
@@ -380,7 +394,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('image/Wallpaper\ energy.jpg');
+  background-image: url("image/Wallpaper\ energy.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(8px); /* Apply the blur effect to the image */
@@ -403,8 +417,8 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  box-sizing: border-box; 
-  background-image: url('image/colorful\ modern\ creative\ fruit\ juice\ drink\ packaging\ 3D\ design.jpg');
+  box-sizing: border-box;
+  background-image: url("image/colorful\ modern\ creative\ fruit\ juice\ drink\ packaging\ 3D\ design.jpg");
   background-size: 100%;
   background-position: center;
   transform: rotateX(-90deg);
@@ -418,7 +432,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('image/colorful\ modern\ creative\ fruit\ juice\ drink\ packaging\ 3D\ design.jpg');
+  background-image: url("image/colorful\ modern\ creative\ fruit\ juice\ drink\ packaging\ 3D\ design.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(8px); /* Apply the blur effect to the image */
@@ -438,7 +452,7 @@ hr {
 .card__title {
   margin: 20px;
   font-size: 50px;
-  font-family:monospace;
+  font-family: monospace;
   opacity: 100px;
   color: #ffffff;
   font-weight: 700;
@@ -453,13 +467,12 @@ hr {
   margin: 20px 20px 0;
   font-size: 20px;
   opacity: 10px;
-  font-family:monospace;
+  font-family: monospace;
   color: rgb(255, 255, 255);
   line-height: 1.4;
 }
 
 /* cards catogaru section ends here */
-
 
 /* top selling recently added cards section starts here */
 
@@ -471,14 +484,11 @@ button {
   cursor: pointer;
 }
 
-.container{
+.container {
   max-width: 1500px;
   margin: auto;
   padding: 10px;
 }
-
-
-
 
 .card-slider {
   display: flex;
@@ -499,7 +509,6 @@ button {
   display: flex;
   align-items: center;
 }
-
 
 .label-container {
   display: flex;
@@ -560,15 +569,19 @@ button {
 }
 
 .image-container::after {
-    content: "";
-    position: absolute;
-    top: 80%;
-    left: 0;
-    right: 0;
-    border: none;
-    border-radius: 0 0 20px 20px;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1)100%);
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .discount-badge {
@@ -622,8 +635,6 @@ button {
   font-size: 26px;
 }
 
-
-
 /* second card section ends*/
 
 /* latest added cards section */
@@ -633,14 +644,11 @@ button {
   cursor: pointer;
 }
 
-.container1{
+.container1 {
   max-width: 1500px;
   margin: auto;
   padding: 10px;
 }
-
-
-
 
 .card-slider1 {
   display: flex;
@@ -662,7 +670,6 @@ button {
   align-items: center;
   justify-content: end;
 }
-
 
 .label-container1 {
   display: flex;
@@ -722,15 +729,19 @@ button {
 }
 
 .image-container1::after {
-    content: "";
-    position: absolute;
-    top: 80%;
-    left: 0;
-    right: 0;
-    border: none;
-    border-radius: 0 0 20px 20px;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1)100%);
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .discount-badge1 {
@@ -786,14 +797,9 @@ button {
 
 /* latest added cards section ends here */
 
-
-
 /* top selling recently added cards section ends here */
 
-
-
 /* customer review css end here!! */
-
 
 /* Icon set - http://ionicons.com/ */
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
@@ -882,9 +888,7 @@ figure.snip1139 .author h5 span {
 }
 /* Demo purposes only */
 
-
 /* Demo purposes only */
-
 
 .swiper {
   width: 100%;
@@ -894,8 +898,8 @@ figure.snip1139 .author h5 span {
 }
 
 .swiper-wrapper {
-  display: flex; 
-  margin-bottom: 50px;/* Swiper requires flexbox for proper alignment */
+  display: flex;
+  margin-bottom: 50px; /* Swiper requires flexbox for proper alignment */
 }
 
 .swiper-slide {
@@ -906,13 +910,9 @@ figure.snip1139 .author h5 span {
   align-items: center;
 }
 
-
 /* customer review css end here!! */
 
-
 /* footer start*/
-
-
 
 /* Reset styles */
 .footer-container * {
@@ -955,7 +955,7 @@ figure.snip1139 .author h5 span {
 }
 
 .footer .footer-col h4::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -1014,6 +1014,5 @@ figure.snip1139 .author h5 span {
     width: 100%;
   }
 }
-
 
 /* footer end */
